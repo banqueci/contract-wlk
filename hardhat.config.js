@@ -12,8 +12,9 @@ module.exports = {
     solidity: "0.8.17",
     networks: {
         hyperspace: {
-            chainId: 7880,
-            url: "https://weechain1.gw106.oneitfarm.com",
+            //goerli以太坊测试网
+            chainId: 5,
+            url: "https://goerli.infura.io/v3/0d9827d18e7242c38d0eeaea6d27745b",
             accounts: [PRIVATE_KEY],
         },
     },
