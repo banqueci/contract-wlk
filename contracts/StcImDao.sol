@@ -32,6 +32,16 @@ contract StcImDao {
 
     }
 
+    function isStake(string memory nodeId) external {
+        //循环查询链上节点，查询到则说明质押过
+        for (uint i = 0; i < _nodeDeposits[msg.sender].length-1; i++){
+            if (isEqual(_nodeDeposits[msg.sender][i].nodeId, nodeId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     // /**
     //  *
